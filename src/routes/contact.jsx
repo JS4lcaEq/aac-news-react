@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../App/slice'
+import { decrement, increment } from '../app/slice'
 
 export default function Contact() {
 
