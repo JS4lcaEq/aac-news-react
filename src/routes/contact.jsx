@@ -1,6 +1,12 @@
+import React from 'react'
 import { Form, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../App/slice'
 
 export default function Contact() {
+
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
   const contact = {
     first: "Your",
     last: "Name",
@@ -16,8 +22,11 @@ export default function Contact() {
 
   const params = useParams();
 
+
+
   return (
     <div id="contact">
+      <div>count={count}</div>
       <div>
         <img
           key={contact.avatar}
@@ -29,7 +38,7 @@ export default function Contact() {
         <h1>
           {contact.first || contact.last ? (
             <>
-              {contact.first} {contact.last} [<span class="red">{params.contactId}</span>]
+              {contact.first} {contact.last} [<span className="red">{params.contactId}</span>]
             </>
           ) : (
             <i>No Name</i>

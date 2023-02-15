@@ -16,6 +16,8 @@ html, body, #root, .app {
   color: #fff;
   line-height: 90px;
   flex: 0 1 90px;
+  display: flex;
+  justify-content:space-between;
 }
 
 #content {
@@ -26,9 +28,9 @@ html, body, #root, .app {
 #bottom {
   background-color: brown;
   color: #fff;
-  flex: 0 1 90px;
+  flex: 0 1 50px;
   display: flex;
-  line-height: 90px;
+  line-height: 50px;
   justify-content: center;
 }
 
@@ -42,6 +44,10 @@ html, body, #root, .app {
 #sub-logo {
   font-size: 24px;
   padding-left: 5px;
+}
+
+#upp-counter {
+ padding-right: 5vw;
 }
 
 span.red {
